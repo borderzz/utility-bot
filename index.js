@@ -2,7 +2,6 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
 const fs = require('fs');
-require('dotenv').config();
 
 //starts bot
 const client = new Discord.Client();
