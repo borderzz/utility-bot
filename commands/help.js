@@ -5,7 +5,8 @@ module.exports = {
         //make embed
         const helpEmbed = new Discord.MessageEmbed()
         .setColor('00FFE4')
-        .setTitle('Placeholder for now just testing if it works')
+        .setTitle('Utility Bot')
+        .setDescription('A discord bot with moderation, and other misc commands')
 
         //send message
         message.channel.send(helpEmbed);
