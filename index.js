@@ -21,27 +21,30 @@ for(const file of commandFiles) {
 //start the bot and post if its ready in console
 
 client.once('ready', () => {
-    console.log('Utilily bot is online!');
+    console.log('Utility bot is online');
 
-//changing custom status
+    //different statuses 
 
-const arrayOfStatus = [
-    `over ${client.guilds.cache.size} servers!`
-    `.help`
+    const arrayOfStatus = [
+        `over ${client.guilds.cache.size} servers!`,
+        `.help`
+    ];
 
-];
+    //set the status
 
-//set custom status
-
-let index = 0;
-setInterval(() => {
-    if(index === arrayOfStatus.length) index = 0;
-    const status = arrayOfStatus[index];
-    console.log(status);
-    client.user.setActivity(status, { type: "WATCHING" }).catch(console.error)
-    index++;
-  }, 7500)
+    let index = 0;
+    setInterval(() => {
+        if(index === arrayOfStatus.length) index = 0;
+        const status = arrayOfStatus[index];
+        console.log(status);
+        client.user.setActivity(status, { type: "WATCHING" }).catch(console.error)
+        index++;
+    }, 7500)
 })
+    
+
+
+
 
 //check if message is bot + starts with prefix
 
