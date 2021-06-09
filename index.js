@@ -76,7 +76,11 @@ client.on('message', message => {
         client.commands.get('ban').execute(message, args, Discord);
     } else if(command === 'avatar') {
         client.commands.get('avatar').execute(message, args, Discord);
-    } 
+    } else if(command === 'slowmode') {
+        client.commands.get('slowmode').execute(message, args, Discord);
+    } else if(command === 'sm') {
+        client.commands.get('slowmode').execute(message, args, Discord);
+    }
 });
 
 //login to the bot
