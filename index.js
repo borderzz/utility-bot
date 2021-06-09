@@ -75,9 +75,9 @@ client.on('message', message => {
         client.commands.get('slowmode').execute(message, args, Discord);
     } else if(command === 'sm') {
         client.commands.get('slowmode').execute(message, args, Discord);
-    } else if(command === 'cmds moderation') {
+    } else if(command === 'cmdsmoderation') {
         client.commands.get('cmdsmoderation').execute(message, args, Discord);
-    } else if(command === 'cmds misc') {
+    } else if(command === 'cmdsmisc') {
         client.commands.get('cmdsmisc').execute(message, args, Discord);
     }
 });
