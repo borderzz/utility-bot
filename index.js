@@ -59,7 +59,7 @@ client.on('message', message => {
 
     client.on('guildCreate', joinedGuild => {
      message.channel.send('Hello Everyone!');
-     message.member.me.setNickname(`${guild.name}'s Utilities`)
+     message.guild.me.setNickname(`${guild.name}'s Utilities`)
     })
 
     //start of if, else if for getting commands
