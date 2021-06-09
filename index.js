@@ -80,6 +80,12 @@ client.on('message', message => {
         client.commands.get('slowmode').execute(message, args, Discord);
     } else if(command === 'sm') {
         client.commands.get('slowmode').execute(message, args, Discord);
+    } else if(command === 'cmds') {
+        client.commands.get('cmds').execute(message, args, Discord);
+    } else if(command === 'cmds moderation') {
+        client.commands.get('cmdsmoderation').execute(message, args, Discord);
+    } else if(command === 'cmds misc') {
+        client.commands.get('cmdsmisc').execute(message, args, Discord);
     }
 });
 
