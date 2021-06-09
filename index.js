@@ -2,6 +2,7 @@
 const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
 const fs = require('fs');
+const { execute } = require('./commands/help');
 
 //starts bot
 const client = new Discord.Client();
@@ -58,6 +59,16 @@ client.on('message', message => {
 
     if(command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
+    } else if(command === 'github') {
+        client.commands.get('github').execute(message, args, Discord);
+    } else if(command === 'invite') {
+        client.commands.get('invite').execute(message, args, Discord);
+    } else if(command === 'kick') {
+        client.commands.get('kick').execute(message, args, Discord);
+    } else if(command === 'ban') {
+        client.commands.get('ban').execute(message, args, Discord);
+    } else if(command === 'avatar') {
+        client.commands.get('avatar').execute(message, args, Discord);
     }
 });
 
