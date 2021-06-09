@@ -57,11 +57,6 @@ client.on('message', message => {
 
     //when join server
 
-    client.on('guildCreate', joinedGuild => {
-     message.channel.send('Hello Everyone!');
-     message.guild.me.setNickname(`${guild.name}'s Utilities`)
-    })
-
     //start of if, else if for getting commands
 
     if(command === 'help') {
@@ -80,8 +75,6 @@ client.on('message', message => {
         client.commands.get('slowmode').execute(message, args, Discord);
     } else if(command === 'sm') {
         client.commands.get('slowmode').execute(message, args, Discord);
-    } else if(command === 'cmds') {
-        client.commands.get('cmds').execute(message, args, Discord);
     } else if(command === 'cmds moderation') {
         client.commands.get('cmdsmoderation').execute(message, args, Discord);
     } else if(command === 'cmds misc') {

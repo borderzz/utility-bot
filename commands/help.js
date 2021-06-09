@@ -8,7 +8,7 @@ module.exports = {
         .setTitle('Utility Bot')
         .setDescription('A discord bot with moderation, and other misc commands')
         .addFields(
-            { name: '.cmds', value: 'To bring up a list of commands' }
+            { name: '.cmds moderation | .cmds misc', value: 'To bring up a list of commands' }
         )
         .setFooter('.invite to invite this bot to your server!')
         //send message
