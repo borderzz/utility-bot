@@ -14,7 +14,7 @@ module.exports = {
            //embed for banning member
            const banEmbed = new Discord.MessageEmbed()
            .setColor('FF0000')
-           .setTitle(`${user.tag} was banned by ${message.authour.name}.`)
+           .setTitle(`${user.tag} was banned by ${message.author.username}.`)
            .setDescription('Rekt')
            message.reply(banEmbed);
           })
