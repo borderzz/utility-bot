@@ -12,7 +12,7 @@ module.exports = {
             //embed for kicking member
             const kickEmbed = new Discord.MessageEmbed()
             .setColor('FF0000')
-            .setTitle(`${user.tag} was kicked by ${message.authour.name}.`)
+            .setTitle(`${user.tag} was kicked by ${message.authour.username}.`)
             .setDescription('Rekt')
             message.reply(kickEmbed);
           })
