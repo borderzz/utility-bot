@@ -55,6 +55,13 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
+    //when join server
+
+    client.on('guildCreate', joinedGuild => {
+     message.channel.send('Hello Everyone!');
+     message.member.me.setNickname(`${guild.name}'s Utilities`)
+    }
+
     //start of if, else if for getting commands
 
     if(command === 'help') {
@@ -69,7 +76,7 @@ client.on('message', message => {
         client.commands.get('ban').execute(message, args, Discord);
     } else if(command === 'avatar') {
         client.commands.get('avatar').execute(message, args, Discord);
-    }
+    } 
 });
 
 //login to the bot
