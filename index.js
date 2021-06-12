@@ -79,9 +79,7 @@ client.on('message', message => {
         client.commands.get('cmdsmoderation').execute(message, args, Discord);
     } else if(command === 'cmdsmisc') {
         client.commands.get('cmdsmisc').execute(message, args, Discord);
-    } else if(command === 'nick') {
-        client.commands.get('nick').execute(message, args, Discord);
-    }
+    } 
 });
 
 //login to the bot
