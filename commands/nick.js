@@ -2,9 +2,9 @@ module.exports = {
     name: 'nick',
     description: 'gives the bot a nickname',
     execute(message, args, Discord) {
-        var nickedUser = message.mentions.users.first();
+        let nickedUser = message.mentions.users.first()
 
-        var newNick = args.join(" ").slice(22);
+        let newNick = args.join(" ").slice(22);
 
         if(!nickedUser) return message.channel.send("You have to mention a user to nick!");
 
