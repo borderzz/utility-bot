@@ -11,7 +11,7 @@ module.exports = {
     let member = message.guild.members.cache.get(user.id);
     member.setNickname(nickname);
 
-    const nickEmbed = new discord.MessageEmbed()
+    const nickEmbed = new Discord.MessageEmbed()
     .setTitle("Nickname Changed")
     .setDescription(`successfully changed ${user.tag}'s nickname to ${nickname}`)
     .setColor('00FFE4')
