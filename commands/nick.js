@@ -11,13 +11,14 @@ module.exports = {
         if(!newNick) return message.channel.send("That is not a valid name!");
         
         if(!message.member.hasPermission("MANAGE_NICKNAMES")) return message.channel.send("You dont have the permission to change nicknames!");
-
-        nickedUser.setNickname(newNick);
+        
+        message.channel.send(nickedUser.setNickname(newNick))
+        //nickedUser.setNickname(newNick);
         //make success embed
-        const nickEmbed = new Discord.MessageEmbed()
-        .setColor('00FFE4')
-        .setTitle('User was nicked')
-        .setDescription(`Changed ${nickedUser}'s nickname to ${newNick}!`)
-        .setTimestamp()
+        //const nickEmbed = new Discord.MessageEmbed()
+        //.setColor('00FFE4')
+        //.setTitle('User was nicked')
+        //.setDescription(`Changed ${nickedUser}'s nickname to ${newNick}!`)
+        //.setTimestamp()
     }
 }
