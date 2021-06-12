@@ -14,6 +14,7 @@ module.exports = {
             .setColor('FF0000')
             .setTitle(`${user.tag} was kicked by ${message.author.username}.`)
             .setDescription('Rekt')
+            .setTimestamp()
             message.reply(kickEmbed);
           })
           .catch(err => {

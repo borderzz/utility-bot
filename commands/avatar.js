@@ -7,7 +7,7 @@ module.exports = {
         .setColor('00FFE4')
         .setTitle(`${message.author.username}'s Avatar:`)
         .setImage(message.author.displayAvatarURL())
-
+        .setTimestamp()
         //send embed
         message.channel.send(avatarEmbed);
 

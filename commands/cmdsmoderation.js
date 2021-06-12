@@ -10,9 +10,11 @@ module.exports = {
         .addFields(
             { name: 'Ban', value: '.ban (username) | Used to permanantly ban a user.', inline: true },
             { name: 'Kick', value: '.kick (username) | Used to kick a member from the server', inline: true },
-            { name: 'Slowmode', value: '.sm / .slowmode | Used to set the channels slowmode', inline: true }
+            { name: 'Slowmode', value: '.sm / .slowmode | Used to set the channels slowmode', inline: true },
+            { name: 'Nick', value: '.nick (username) (nickname) | Used to nickname someone in the server', inline: true }
         )
         .setFooter('.invite to invite this bot to your server!')
+        .setTimestamp()
         message.channel.send(modEmbed);
     }
 }

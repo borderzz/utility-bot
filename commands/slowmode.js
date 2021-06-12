@@ -17,6 +17,7 @@ module.exports = {
         .setColor('00FFE4')
         .setTitle('Set this channels slowmode.')
         .setDescription(`I have set the slowmode to \'${time}\' seconds.`)
+        .setTimestamp()
         message.channel.send(slowmodeEmbed)
     }
 }

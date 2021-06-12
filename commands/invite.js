@@ -8,7 +8,7 @@ module.exports = {
         .setTitle('Invite this bot to your server')
         .setURL('https://discord.com/api/oauth2/authorize?client_id=851899997430480947&permissions=8&scope=bot')
         .setDescription('If you want to use this bot for yourself, just click the link above!')
-
+        .setTimestamp()
         //send message 
         message.channel.send(inviteEmbed);
     }

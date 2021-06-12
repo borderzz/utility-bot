@@ -16,6 +16,7 @@ module.exports = {
            .setColor('FF0000')
            .setTitle(`${user.tag} was banned by ${message.author.username}.`)
            .setDescription('Rekt')
+           .setTimestamp()
            message.reply(banEmbed);
           })
           .catch(err => {

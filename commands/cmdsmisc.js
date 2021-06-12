@@ -13,6 +13,7 @@ module.exports = {
             { name: 'Avatar', value: '.avatar | Shows you your avatar so you can copy the link or just see it', inline: true },
         )
         .setFooter('.invite to invite this bot to your server!')
+        .setTimestamp()
         message.channel.send(miscEmbed);
     }
 }

@@ -11,6 +11,7 @@ module.exports = {
             { name: '.cmdsmoderation | .cmdsmisc', value: 'To bring up a list of commands' }
         )
         .setFooter('.invite to invite this bot to your server!')
+        .setTimestamp()
         //send message
         message.channel.send(helpEmbed);
     }

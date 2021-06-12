@@ -8,7 +8,7 @@ module.exports = {
         .setTitle('Github Repository')
         .setURL('https://www.github.com/borderzz/utility-bot')
         .setDescription('If you want to look over the bots code or something else, heres the Github page')
-
+        .setTimestamp()
         //send embed
         message.channel.send(githubEmbed);
     }
