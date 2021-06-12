@@ -9,7 +9,7 @@ module.exports = {
     if(!nickname) return message.reply("Specify a nickname to change to!")
 
     let member = message.guild.members.cache.get(user.id);
-    await member.setNickname(nickname);
+    member.setNickname(nickname);
 
     const nickEmbed = new discord.MessageEmbed()
     .setTitle("Nickname Changed")
