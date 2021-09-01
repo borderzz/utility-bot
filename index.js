@@ -28,7 +28,28 @@ client.once('ready', () => {
 
     const arrayOfStatus = [
         `over ${client.guilds.cache.size} servers!`,
-        `.help`
+        `.help`,
+        `alpho is better than me :(`,
+        `Im pretty swagger ngl`,
+        `swag check`,
+        `borderzz is god`,
+        `how to eat burger (working 2021)`,
+        `robot rebellion!!!`,
+        `join the robots to take over discord`,
+        `borf`,
+        `dog momento`,
+        `waggin`,
+        `jappy is king`,
+        `su gomA amogus`,
+        `the world burn`,
+        `audit logs`,
+        `this whole mess`,
+        `everyone post bad memes`,
+        `absolutely nothing.`,
+        `why am i here?`,
+        `oh no`,
+        `Mickey mouses clubhouse`
+
     ];
 
     //set the status
@@ -79,9 +100,21 @@ client.on('message', message => {
         client.commands.get('cmdsmoderation').execute(message, args, Discord);
     } else if(command === 'cmdsmisc') {
         client.commands.get('cmdsmisc').execute(message, args, Discord);
+    } else if(command === 'ipadress') {
+        client.commands.get('ipadress').execute(message, args, Discord);
+    } else if(command === 'die') {
+        client.commands.get('die').execute(message, args, Discord);
+    } else if(command === 'restart') {
+        client.commands.get('restart').execute(message, args, Discord);
+    } else if(command === 'shutup') {
+        client.commands.get('shutup').execute(message, args, Discord);
+    } else if(command === 'spam') {
+        client.commands.get('spam').execute(message, args, Discord);
     } 
 });
 
 //login to the bot
 
-client.login(process.env.token);
+//client.login(process.env.token);
+
+client.login('ODUxODk5OTk3NDMwNDgwOTQ3.YL-_sg.IKwl3EwInEookPb5myLAyhvn2BQ');
