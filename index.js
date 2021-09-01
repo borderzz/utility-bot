@@ -115,6 +115,4 @@ client.on('message', message => {
 
 //login to the bot
 
-//client.login(process.env.token);
-
-client.login('ODUxODk5OTk3NDMwNDgwOTQ3.YL-_sg.IKwl3EwInEookPb5myLAyhvn2BQ');
+client.login(process.env.token);
