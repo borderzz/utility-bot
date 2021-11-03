@@ -65,11 +65,11 @@ client.once('ready', () => {
 })
     
 
-
+const canread = true
 
 
 //check if message is bot + starts with prefix
-
+while (canread = true) {
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -110,8 +110,11 @@ client.on('message', message => {
         client.commands.get('shutup').execute(message, args, Discord);
     } else if(command === 'spam') {
         client.commands.get('spam').execute(message, args, Discord);
-    } 
+    } else if(command === 'stop') {
+        client.commands.get('stop').execute(message, args, Discord);
+    }
 });
+}
 
 //login to the bot
 

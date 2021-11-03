@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
     name: 'die',
     description: 'kill',
     execute(message, args, Discord) {
@@ -12,4 +12,5 @@ module.exports = {
                 message.channel.send('good try loaser');
         }
     }
-} 
+}
+*/
