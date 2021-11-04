@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
     name: 'stop',
     description: 'stops the bot from using commands',
     execute(message, args, Discord) {
@@ -15,4 +15,4 @@ module.exports = {
         
         }
     }
-}
+} */
