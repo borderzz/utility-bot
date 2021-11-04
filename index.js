@@ -69,7 +69,7 @@ let canread = true;
 
 
 //check if message is bot + starts with prefix
-if(canread == true) {
+while(canread == true) {
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -113,7 +113,7 @@ client.on('message', message => {
     } else if(command === 'stop') {
         let borgers = '527893930805559330'
         if (message.author.id = borgers) {
-        var canread = false;
+        const canread = false;
         const stopembed = new Discord.MessageEmbed()
         .setColor('FF0000')
         .setTitle('Stopped')
