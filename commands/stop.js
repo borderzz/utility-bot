@@ -11,7 +11,7 @@ module.exports = {
         .setTimestamp()
          
         message.channel.send(stopembed)
-        const canread = false
+        canread = false;
         
         }
     }
