@@ -66,10 +66,10 @@ client.once('ready', () => {
     
 
 let canread = true;
-
+let a = 1
 
 //check if message is bot + starts with prefix
-while (1 = 1) return;
+while (a = 1) return;
 if(canread == true) return; {
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
