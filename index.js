@@ -111,7 +111,16 @@ client.on('message', message => {
     } else if(command === 'spam') {
         client.commands.get('spam').execute(message, args, Discord);
     } else if(command === 'stop') {
-        client.commands.get('stop').execute(message, args, Discord);
+        let borgers = '527893930805559330'
+        if (message.author.id = borgers) {
+        var canread = false;
+        const stopembed = new Discord.MessageEmbed()
+        .setColor('FF0000')
+        .setTitle('Stopped')
+        .setDescription('okay master')
+        .setImage(message.author.displayAvatarURL())
+        .setTimestamp()
+        message.channel.send(stopembed) }
     }
 });
 }
