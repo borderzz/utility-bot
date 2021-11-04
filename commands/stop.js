@@ -10,9 +10,9 @@ module.exports = {
         .setDescription('okay master')
         .setImage(message.author.displayAvatarURL())
         .setTimestamp()
-         
+        let canread = false;
         message.channel.send(stopembed)
-        canread = false;
+    
         
         }
     }
