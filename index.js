@@ -70,7 +70,7 @@ let a = 1
 
 //check if message is bot + starts with prefix
 while (a = 1) return;
-if(canread == true) return; {
+if(canread == true) {
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
