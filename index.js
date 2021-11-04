@@ -69,6 +69,7 @@ let canread = true;
 
 
 //check if message is bot + starts with prefix
+while (1 = 1) return;
 if(canread == true) return; {
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -79,6 +80,7 @@ client.on('message', message => {
     //when join server
 
     //start of if, else if for getting commands
+    
 
     if(command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
@@ -124,7 +126,6 @@ client.on('message', message => {
     }
 });
 }
-
 //login to the bot
 
 client.login(process.env.token);
