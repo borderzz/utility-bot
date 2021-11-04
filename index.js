@@ -65,7 +65,7 @@ client.once('ready', () => {
 })
     
 
-let canread = true;
+let canread = false;
 
 
 //check if message is bot + starts with prefix
