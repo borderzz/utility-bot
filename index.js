@@ -6,6 +6,7 @@ const { execute } = require('./commands/help');
 
 //starts bot
 const client = new Discord.Client();
+let canread = true;
 
 //prefix
 const prefix = '.';
@@ -23,7 +24,6 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Utility bot is online');
-    let canread = true;
     console.log(canread)
 
     //different statuses 
