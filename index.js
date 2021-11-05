@@ -24,8 +24,7 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Utility bot is online');
-    console.log(canread)
-    canread = true;
+    let canread = true;
     console.log(canread)
 
     //different statuses 
@@ -65,7 +64,7 @@ client.once('ready', () => {
         console.log(status);
         client.user.setActivity(status, { type: "WATCHING" }).catch(console.error)
         index++;
-    }, 1000)
+    }, 7500)
 })
 
 //check if message is bot + starts with prefix
