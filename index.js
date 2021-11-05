@@ -9,11 +9,12 @@ const client = new Discord.Client();
 
 
 //prefix
-let canreadnum = 2;
-const prefix = '.';
-if(canreadnum > 1) {
 let canread = true;
-canreadnum = 0;
+const prefix = '.';
+if(canread == false) {
+
+} else {
+    let canread = true;
 }
 //setup for command files 
 client.commands = new Discord.Collection();
