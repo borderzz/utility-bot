@@ -70,7 +70,7 @@ let canread = true;
 //check if message is bot + starts with prefix
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
-if(!canread == true) {
+if(canread == true) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
@@ -109,7 +109,6 @@ if(!canread == true) {
     } else if(command === 'stop') {
         client.commands.get('stop').execute(message, args, Discord);
     }
-}
 });
 
 //login to the bot
