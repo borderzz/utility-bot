@@ -77,6 +77,7 @@ if(canread == true) {
     
     if(command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
+        message.channel.send(canread)
     } else if(command === 'github') {
         client.commands.get('github').execute(message, args, Discord);
     } else if(command === 'invite') {
