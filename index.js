@@ -68,19 +68,16 @@ client.once('ready', () => {
 let canread = true;
 
 //check if message is bot + starts with prefix
-if(canread == true) {
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    //when join server
-
     //start of if, else if for getting commands
     
-
-    if(command === 'help') {
+    if(canread == true) {
+    if(command === help) {
         client.commands.get('help').execute(message, args, Discord);
     } else if(command === 'github') {
         client.commands.get('github').execute(message, args, Discord);
@@ -111,19 +108,11 @@ client.on('message', message => {
     } else if(command === 'spam') {
         client.commands.get('spam').execute(message, args, Discord);
     } else if(command === 'stop') {
-        let borgers = '527893930805559330'
-        if (message.author.id = borgers) {
-        canread = false;
-        const stopembed = new Discord.MessageEmbed()
-        .setColor('FF0000')
-        .setTitle('Stopped')
-        .setDescription('okay master')
-        .setImage(message.author.displayAvatarURL())
-        .setTimestamp()
-        message.channel.send(stopembed) }
+        client.commands.get('stop').execute(message, args, Discord);
     }
-});
 }
+});
+
 //login to the bot
 
 client.login(process.env.token);
