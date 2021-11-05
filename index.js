@@ -23,6 +23,7 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Utility bot is online');
+    let canread = true;
 
     //different statuses 
 
@@ -63,8 +64,6 @@ client.once('ready', () => {
         index++;
     }, 7500)
 })
-    
-let canread = true;
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
