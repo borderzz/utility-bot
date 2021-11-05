@@ -69,14 +69,13 @@ let canread = true;
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!message.content.startsWith(prefix) || message.author.bot || canread == true) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     //start of if, else if for getting commands
     
-    if(canread == true) {
     if(command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
     } else if(command === 'github') {
@@ -110,7 +109,6 @@ client.on('message', message => {
     } else if(command === 'stop') {
         client.commands.get('stop').execute(message, args, Discord);
     }
-}
 });
 
 //login to the bot
