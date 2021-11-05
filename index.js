@@ -69,8 +69,7 @@ let canread = true;
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
-if(canread == true) return;
+    if(!message.content.startsWith(prefix) || canread == true) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
