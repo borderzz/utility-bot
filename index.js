@@ -64,7 +64,7 @@ client.once('ready', () => {
     }, 7500)
 })
     
-
+let canread = true;
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
@@ -106,8 +106,7 @@ if(canread == true) {
     } else if(command === 'spam') {
         client.commands.get('spam').execute(message, args, Discord);
     } else if(command === 'stop') {
-        //client.commands.get('stop').execute(message, args, Discord);
-        message.channel.send(canread)
+        client.commands.get('stop').execute(message, args, Discord);
     }
 } else {
     message.channel.send('nope')

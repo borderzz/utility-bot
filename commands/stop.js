@@ -12,6 +12,7 @@ module.exports = {
         .setImage(message.author.displayAvatarURL())
         .setTimestamp()
         message.channel.send(stopembed)
+        message.channel.send(canread)
     
         
         }
