@@ -4,7 +4,7 @@ module.exports = {
     execute(message, args, Discord) {
         let borgers = '527893930805559330'
         if (message.author.id = borgers || canread == true) {
-        var canread = false;
+        let canread = false;
         const stopembed = new Discord.MessageEmbed()
         .setColor('FF0000')
         .setTitle('Stopped')

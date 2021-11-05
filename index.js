@@ -6,7 +6,7 @@ const { execute } = require('./commands/help');
 
 //starts bot
 const client = new Discord.Client();
-let canread = true;
+var canread = true;
 
 //prefix
 const prefix = '.';
