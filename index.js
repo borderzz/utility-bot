@@ -9,6 +9,7 @@ const client = new Discord.Client();
 
 
 //prefix
+const prefix = '.';
 var setcanread = (function() {
     var executed = false;
     return function() {
@@ -19,7 +20,6 @@ var setcanread = (function() {
     };
 })();
 setcanread();
-
 //setup for command files 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
