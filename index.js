@@ -60,15 +60,15 @@ client.once('ready', () => {
     setInterval(() => {
         if(index === arrayOfStatus.length) index = 0;
         const status = arrayOfStatus[index];
+        message.channel.send(canread)
         console.log(status);
         client.user.setActivity(status, { type: "WATCHING" }).catch(console.error)
         index++;
-    }, 7500)
+    }, 1000)
 })
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
-    message.channel.send(canread)
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 if(canread == true) { 
     const args = message.content.slice(prefix.length).split(/ +/);
