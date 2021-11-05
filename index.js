@@ -9,9 +9,12 @@ const client = new Discord.Client();
 
 
 //prefix
+let canreadnum = 2;
 const prefix = '.';
+if(canreadnum > 1) {
 let canread = true;
-
+canreadnum = 0;
+}
 //setup for command files 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
