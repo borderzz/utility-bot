@@ -106,7 +106,8 @@ if(canread == true) {
     } else if(command === 'spam') {
         client.commands.get('spam').execute(message, args, Discord);
     } else if(command === 'stop') {
-        client.commands.get('stop').execute(message, args, Discord);
+        //client.commands.get('stop').execute(message, args, Discord);
+        message.channel.send(canread)
     }
 } else {
     message.channel.send('nope')
