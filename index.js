@@ -77,7 +77,7 @@ client.on('message', message => {
     //start of if, else if for getting commands
     
     if(canread == true) {
-    if(command === help) {
+    if(command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
     } else if(command === 'github') {
         client.commands.get('github').execute(message, args, Discord);
