@@ -6,7 +6,7 @@ const { execute } = require('./commands/help');
 
 //starts bot
 const client = new Discord.Client();
-var canread = true;
+
 
 //prefix
 const prefix = '.';
@@ -24,6 +24,8 @@ for(const file of commandFiles) {
 
 client.once('ready', () => {
     console.log('Utility bot is online');
+    console.log(canread)
+    canread = true;
     console.log(canread)
 
     //different statuses 
@@ -60,7 +62,6 @@ client.once('ready', () => {
     setInterval(() => {
         if(index === arrayOfStatus.length) index = 0;
         const status = arrayOfStatus[index];
-        message.channel.send(canread)
         console.log(status);
         client.user.setActivity(status, { type: "WATCHING" }).catch(console.error)
         index++;
