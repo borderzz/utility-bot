@@ -68,6 +68,7 @@ client.once('ready', () => {
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
+    message.channel.send(canread)
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 if(canread == true) { 
     const args = message.content.slice(prefix.length).split(/ +/);
