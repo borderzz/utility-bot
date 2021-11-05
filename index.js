@@ -24,6 +24,7 @@ for(const file of commandFiles) {
 client.once('ready', () => {
     console.log('Utility bot is online');
     let canread = true;
+    console.log(canread)
 
     //different statuses 
 
