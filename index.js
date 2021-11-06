@@ -80,7 +80,7 @@ var setcanread = (function() {
             console.log('no workey')
         }
     };
-})();
+});
 
 setcanread(); 
 
