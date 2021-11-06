@@ -83,6 +83,8 @@ function setonce() {
 setonce(); // hello world
 
 setcanread(); 
+setcanread();
+setcanread();
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
