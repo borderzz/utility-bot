@@ -68,8 +68,17 @@ client.once('ready', () => {
 })
 
 //sets canread
-var canread = true;
+var something = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            console.log('setcanread')
+        }
+    };
+})();
 
+something(); 
 //check if message is bot + starts with prefix
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
