@@ -22,6 +22,9 @@ for(const file of commandFiles) {
 //sets canread var
 let canread = true;
 console.log(`canread = ${canread}`)
+while(true) {
+    console.log(canread)
+}
 
 //start the bot and post if its ready in console
 
