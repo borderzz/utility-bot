@@ -4,10 +4,6 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const { execute } = require('./commands/help');
 
-//sets canread var
-let canread = true;
-console.log('amoong us')
-
 //starts bot
 const client = new Discord.Client();
 
@@ -22,6 +18,10 @@ for(const file of commandFiles) {
 
     client.commands.set(command.name, command);
 }
+
+//sets canread var
+let canread = true;
+console.log(`canread = ${canread}`)
 
 //start the bot and post if its ready in console
 
