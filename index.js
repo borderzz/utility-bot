@@ -6,6 +6,7 @@ const { execute } = require('./commands/help');
 
 //sets canread var
 let canread = true;
+console.log('amoong us')
 
 //starts bot
 const client = new Discord.Client();
