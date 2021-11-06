@@ -3,20 +3,16 @@ const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
 const fs = require('fs');
 const { execute } = require('./commands/help');
+console.log('requires')
 
 //starts bot
 const client = new Discord.Client();
-
+console.log('starts bot')
 
 //prefix
 const prefix = '.';
-var canreadset = false;
-if(canreadset == false) {
-    canread = true;
-    canreadset = true;
-} else {
-    console.log('error = someting oopsied')
-}
+console.log('prefix')
+
 //setup for command files 
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -25,11 +21,13 @@ for(const file of commandFiles) {
 
     client.commands.set(command.name, command);
 }
+console.log('setup for command files')
 
 //start the bot and post if its ready in console
 
 client.once('ready', () => {
     console.log('Utility bot is online');
+    console.log('start the bot')
 
     //different statuses 
 
