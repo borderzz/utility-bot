@@ -74,7 +74,7 @@ var setcanread = (function() {
         if (!executed) {
             executed = true;
             console.log('setcanread')
-            let canread = true;
+            var canread = true;
             console.log(canread)
         } else {
             console.log('no workey')
