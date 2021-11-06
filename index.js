@@ -68,23 +68,19 @@ client.once('ready', () => {
 })
 
 //sets canread
-let setcanread = false;
+var setcanread = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+            let canread = true;
+            console.log(canread)
+        }
+    };
+})();
 
-function setCanread() {
-  let canread = true;
-  console.log(canread)
-  executed = true;
-}
-
-function setonce() {
-  if (!executed) setCanread();
-}
-
-setonce(); // hello world
-
-setcanread(); 
-setcanread();
-setcanread();
+setcanread(); // "do something" happens
+setcanread(); // nothing happens
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
