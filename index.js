@@ -68,19 +68,19 @@ client.once('ready', () => {
 })
 
 //sets canread
-var setcanread = (function() {
-    var executed = false;
-    return function() {
-        if (!executed) {
-            executed = true;
-            console.log('setcanread')
-            var canread = true;
-            console.log(canread)
-        } else {
-            console.log('no workey')
-        }
-    };
-});
+let setcanread = false;
+
+function setCanread() {
+  let canread = true;
+  console.log(canread)
+  executed = true;
+}
+
+function setonce() {
+  if (!executed) setCanread();
+}
+
+setonce(); // hello world
 
 setcanread(); 
 
