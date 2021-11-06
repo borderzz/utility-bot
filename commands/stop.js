@@ -2,9 +2,9 @@ module.exports = {
     name: 'stop',
     description: 'stops the bot from using commands',
     execute(message, args, Discord) {
-        let borgers = '527893930805559330'
+        var borgers = '527893930805559330'
         if (message.author.id = borgers) {
-        let canread = false;
+        var canread = false;
         const stopembed = new Discord.MessageEmbed()
         .setColor('FF0000')
         .setTitle('Stopped')
