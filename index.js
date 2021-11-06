@@ -68,20 +68,7 @@ client.once('ready', () => {
 })
 
 //sets canread
-// this function does nothing
-function noop() {};
-
-function foo() {
-    foo = noop; // swap the functions
-
-    let canread = true;
-}
-
-function bar() {
-    bar = noop; // swap the functions
-
-    let canread = true;
-}
+let canread = true;
 
 //check if message is bot + starts with prefix
 client.on('message', message => {
