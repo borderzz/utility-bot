@@ -74,6 +74,7 @@ var something = (function() {
         if (!executed) {
             executed = true;
             console.log('setcanread')
+            let canread = true;
         }
     };
 })();
