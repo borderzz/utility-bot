@@ -19,12 +19,8 @@ for(const file of commandFiles) {
     client.commands.set(command.name, command);
 }
 
-//sets canread var
-let canread = true;
-console.log(`canread = ${canread}`)
-while(true) {
-    console.log(canread)
-}
+
+
 
 //start the bot and post if its ready in console
 
@@ -71,6 +67,9 @@ client.once('ready', () => {
     }, 7500)
 })
 
+//sets canread
+let canread = true;
+
 //check if message is bot + starts with prefix
 client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -113,6 +112,8 @@ if(canread == true) {
         client.commands.get('spam').execute(message, args, Discord);
     } else if(command === 'stop') {
         client.commands.get('stop').execute(message, args, Discord);
+    } else if(command === 'canread') {
+        message.channel.send(canread)
     }
 } else {
     message.channel.send('nope')
