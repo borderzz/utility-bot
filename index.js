@@ -3,6 +3,7 @@ const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require('constants');
 const Discord = require('discord.js');
 const fs = require('fs');
 const { execute } = require('./commands/help');
+const { token } = require('./config.json')
 
 //starts bot
 const client = new Discord.Client();
@@ -81,7 +82,6 @@ if(canread == true) {
     
     if(command === 'help') {
         client.commands.get('help').execute(message, args, Discord);
-        message.channel.send(canread)
     } else if(command === 'github') {
         client.commands.get('github').execute(message, args, Discord);
     } else if(command === 'invite') {
@@ -110,16 +110,12 @@ if(canread == true) {
         client.commands.get('shutup').execute(message, args, Discord);
     } else if(command === 'spam') {
         client.commands.get('spam').execute(message, args, Discord);
-    } else if(command === 'stop') {
-        client.commands.get('stop').execute(message, args, Discord);
-    } else if(command === 'canread') {
-        message.channel.send(canread)
-    }
+    } else if(command === 'msgall') {
+        client.commands.get('msgall').execute(message, args, Discord);
 } else {
     message.channel.send('nope')
-}
-});
+}}});
 
 //login to the bot
 
-client.login(process.env.token);
+client.login(token);
